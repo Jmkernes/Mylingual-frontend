@@ -65,29 +65,29 @@ export default function () {
       className="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-gradient-to-b from-[hsl(0,0%,8%)] to-transparent hover:backdrop-blur-md hover:bg-[hsl(0,0%,12%,0.8)] hover:shadow-black hover:shadow-md"
       // style={{ backgroundColor: `hsl(0,0%,8%,${opacity})` }}
     >
-      <div className="px-8 py-2 flex items-center justify-between">
+      <div className="px-2 md:px-4 lg:px-8 py-2 md:py-4 flex items-center justify-between">
         {/* Logo */}
         <Link
           href="#"
-          className="text-white text-xl font-bold tracking-wider uppercase"
+          className="text-white text-xs md:text-base font-bold tracking-wider uppercase"
         >
           MyLingual AI
         </Link>
 
-        <div className="left-1/2 -translate-x-1/2 top-3 max-h-8 max-w-8 hidden md:block absolute">
+        <div className="left-1/2 -translate-x-1/2 top-[0.6rem] md:top-5 max-h-8 max-w-8 absolute">
           <Image
             alt="logo"
             src={"/android-chrome-192x192.png"}
             height={300}
             width={300}
-            className="h-fit w-fit"
+            className="md:h-fit md:w-fit h-6 w-6"
           />
         </div>
 
         {/* Signup Button */}
         <button
           onClick={() => window.open(SIGNUP_FORM_URL, "_blank")}
-          className="px-4 py-2 text-sm font-medium  bg-red-500/16 border border-red-500/32 rounded-md hover:bg-emerald-500 hover:text-white transition-all duration-300 text-red-500"
+          className="px-2 py-1 md:px-4 md:py-2 text-xs md:text-sm font-medium  bg-red-500/16 border border-red-500/32 rounded-md hover:bg-emerald-500 hover:text-white transition-all duration-300 text-red-500"
         >
           Sign Up
         </button>
