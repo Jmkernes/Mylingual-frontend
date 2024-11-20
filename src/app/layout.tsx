@@ -1,19 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat, Nunito_Sans, Open_Sans } from "next/font/google";
+import dynamic from "next/dynamic";
+import { Open_Sans } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
+  ssr: false,
+});
 
 const openSans = Open_Sans({
-  subsets: ["latin"],
-});
-
-const montserrat = Montserrat({
-  subsets: ["latin"],
-});
-
-const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
 });
 

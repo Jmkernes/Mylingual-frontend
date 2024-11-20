@@ -42,3 +42,4 @@ _ignore
 .env.development
 client*
 src/utils/names.ts
+.env.production

@@ -9,7 +9,15 @@ import { useEffect, useState } from "react";
 import GetTheAppButton from "./GetTheAppButton";
 
 const HeroText = () => {
-  const texts = ["Hello", "你好", "Hola", "こんにちは"];
+  const texts = [
+    "Welcome",
+    "ようこそ",
+    "Bienvenida",
+    "欢迎光临",
+    "مرحباً",
+    "Bienvenue",
+    "Willkommen",
+  ];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -34,7 +42,7 @@ const HeroText = () => {
         }}
         exit={{ scale: 1, transition: { ease: "easeIn", duration: 10 } }}
         transition={{ type: "spring", bounce: 0.5, damping: 10 }}
-        className="text-4xl font-bold text-blue-300 drop-shadow-lg "
+        className="text-4xl font-bold bg-gradient-to-b from-blue-500 to-sky-400 bg-clip-text text-transparent drop-shadow-lg "
       >
         {texts[currentIndex]}
       </motion.h2>
