@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { SIGNUP_FORM_URL } from "./constants";
 
 const langs = [
   "EN",
@@ -84,7 +85,10 @@ export default function () {
         </div>
 
         {/* Signup Button */}
-        <button className="px-4 py-2 text-sm font-medium  bg-red-500/16 border border-red-500/32 rounded-md hover:bg-emerald-500 hover:text-white transition-all duration-300 text-red-500">
+        <button
+          onClick={() => window.open(SIGNUP_FORM_URL, "_blank")}
+          className="px-4 py-2 text-sm font-medium  bg-red-500/16 border border-red-500/32 rounded-md hover:bg-emerald-500 hover:text-white transition-all duration-300 text-red-500"
+        >
           Sign Up
         </button>
       </div>

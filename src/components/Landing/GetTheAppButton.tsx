@@ -1,6 +1,7 @@
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { SIGNUP_FORM_URL } from "./constants";
 
 export default function () {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,6 +24,7 @@ export default function () {
         scale: "1.1",
         transition: { duration: 0.3 },
       }}
+      onClick={() => window.open(SIGNUP_FORM_URL, "_blank")}
       className="relative backdrop-blur-md rounded-full h-12 bg-gradient-to-br from-red-500/80 via-rose-500/80 to-orange-600/80 hover:scale-110 duration-300 transition-all hover:bg-gradient-to-br hover:from-emerald-500 hover:to-green-500 group"
     >
       <motion.span

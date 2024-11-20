@@ -23,7 +23,7 @@ export default function () {
       />
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col md:flex-row justify-center items-center gap-8 px-4 lg:px-12 w-full max-w-7xl">
+      <div className="relative z-20 flex flex-col md:flex-row justify-center items-center gap-12 px-4 lg:px-12 w-full max-w-7xl">
         {/* Text Section */}
         <div className="flex flex-col gap-4 text-center lg:text-left lg:w-1/2">
           <motion.h2
@@ -51,18 +51,20 @@ export default function () {
         <div className="relative flex justify-center lg:justify-end items-center gap-4 lg:gap-6">
           {/* Left Frame */}
           <motion.img
-            src=""
-            alt="frame1"
-            className="w-40 lg:w-64 aspect-[500/1041] transform translate-x-[-10%]"
-            style={{ y: leftFrameY }}
+            src="/landing-frame1.jpeg"
+            alt="Wireframe 1"
+            className="w-40 lg:w-64 aspect-[500/1041] transform translate-x-[-10%] rounded-2xl shadow-sm shadow-black overflow-clip"
+            style={{
+              y: leftFrameY,
+            }}
           />
 
           {/* Right Frame */}
           <motion.img
-            src=""
-            alt="frame2"
-            className="w-44 lg:w-72 aspect-[657/1369] transform translate-x-[10%]"
-            style={{ y: rightFrameY }}
+            src="/landing-frame2.jpeg"
+            alt="Wireframe 2"
+            className="w-44 lg:w-72 aspect-[657/1369] transform translate-x-[10%] rounded-2xl shadow-sm shadow-black overflow-clip"
+            style={{ y: rightFrameY, rotateZ: "8deg" }}
           />
         </div>
       </div>

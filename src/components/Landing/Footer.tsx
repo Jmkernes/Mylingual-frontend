@@ -6,6 +6,7 @@ import { StarIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import { SIGNUP_FORM_URL } from "./constants";
 
 const CYCLES_PER_LETTER = 2;
 const SHUFFLE_TIME = 25;
@@ -72,7 +73,7 @@ function Socials() {
     <div className="flex gap-4 items-center opacity-100">
       {/* Twitter */}
       <a
-        href="https://x.com/learnframer"
+        href="https://x.com/mylingualai"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition"
@@ -92,13 +93,13 @@ function Socials() {
           />
         </svg>
       </a>
-      {/* YouTube */}
+      {/* Instagram */}
       <a
-        href="https://youtube.com/@framer.university"
+        href="https://instagram.com/mylingualai"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition"
-        aria-label="YouTube"
+        aria-label="Instagram"
       >
         <svg
           width="16"
@@ -127,13 +128,13 @@ function Socials() {
           ></path>
         </svg>
       </a>
-      {/* Instagram */}
+      {/* Youtube */}
       <a
-        href="https://instagram.com/framer.university"
+        href="https://youtube.com/@mylingualai"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:opacity-80 transition"
-        aria-label="Instagram"
+        aria-label="YouTube"
       >
         <svg
           width="16"
@@ -198,7 +199,10 @@ export default function () {
               </Link>
             ))}
           </div>
-          <button className="mt-auto flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-lg font-bold bg-[hsl(204,7%,22%)] hover:text-black hover:bg-green-500 w-fit duration-300 group">
+          <button
+            onClick={() => window.open(SIGNUP_FORM_URL, "_blank")}
+            className="mt-auto flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-lg font-bold bg-[hsl(204,7%,22%)] hover:text-black hover:bg-green-500 w-fit duration-300 group"
+          >
             <StarIcon className="h-4 w-4 text-yellow-500 group-hover:animate-spin stroke-1 stroke-black" />
             <span>Sign up</span>
           </button>
