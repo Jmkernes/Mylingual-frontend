@@ -10,22 +10,22 @@ const features = [
   {
     title: "Speed",
     description:
-      "Learn a language faster than ever with our adaptive AI algorithms that tailor lessons to your pace.",
-    icon: <BoltIcon className="h-8 w-8 stroke-2" />,
+      "Most language courses take years to get to fluency. Our AI designs the most efficient path to your target proficiency, reducing acquisition time by up to 10x",
+    icon: <BoltIcon className="h-4 w-4 md:h-6 md:w-6 stroke-2" />,
     gradient: "from-yellow-400 via-orange-500 to-red-500",
   },
   {
     title: "Skill",
     description:
-      "Master real-world skills with practical exercises and personalized feedback to enhance your proficiency.",
-    icon: <CpuChipIcon className="h-8 w-8 stroke-2" />,
+      "For most of us, we learn a language for one reason: communication. Our curriculum enables you to discuss the topics important to you, whether that's physics, work, or the last season of Love is Blind",
+    icon: <CpuChipIcon className="h-4 w-4 md:h-6 md:w-6 stroke-2" />,
     gradient: "from-green-400 via-teal-500 to-blue-500",
   },
   {
     title: "Fun",
     description:
-      "Engage with gamified lessons, interactive challenges, and a community of language enthusiasts.",
-    icon: <FaceSmileIcon className="h-8 w-8 stroke-2" />,
+      "Language learning should be fun, and we mean it. The faster you can begin thinking in a new language, the more you'll build good habits. We use gamification and a supportive community of learners to help you succeed",
+    icon: <FaceSmileIcon className="h-4 w-4 md:h-6 md:w-6 stroke-2" />,
     gradient: "from-pink-400 via-purple-500 to-indigo-500",
   },
 ];
@@ -48,29 +48,30 @@ export default function () {
           </span>
         </motion.h2>
         <motion.p
-          className="text-lg md:text-md text-gray-300 mt-4 max-w-3xl mx-auto"
+          className="text-sm md:text-md text-gray-300 mt-4 max-w-3xl mx-auto"
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
-          Our app is designed to revolutionize language learning with speed,
-          skill, and fun at its core.
+          We{"'"}ve invented a new way to learn languages, using AI to go beyond
+          immersion
         </motion.p>
       </header>
 
-      <motion.div
-        animate={{ x: ["-100%", "100%", "-100%"] }}
-        transition={{
-          duration: 2,
-          ease: "easeInOut",
-          times: [0, 1, 2],
-          repeat: Infinity,
-          repeatDelay: 2,
-        }}
-        className="h-[1px] w-full"
-        style={{
-          background: `
+      <div className="flex items-center justify-center w-2/3 overflow-hidden">
+        <motion.div
+          animate={{ x: ["-100%", "100%", "-100%"] }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 1, 2],
+            repeat: Infinity,
+            repeatDelay: 2,
+          }}
+          className="h-[1px] w-full"
+          style={{
+            background: `
       linear-gradient(
               to right, 
               rgba(0, 0, 0, 0) 0%, 
@@ -80,8 +81,9 @@ export default function () {
               rgba(0, 0, 0, 0) 100%
             )
           `,
-        }}
-      ></motion.div>
+          }}
+        ></motion.div>
+      </div>
 
       {/* Features Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[90%] px-4">
@@ -92,15 +94,21 @@ export default function () {
             viewport={{ amount: 0.2 }}
             transition={{ duration: 1, delay: index * 0.2 }}
             key={index}
-            className="bg-[hsl(0,0%,12%)] p-6 rounded-lg shadow-lg flex flex-col"
+            className="bg-[hsl(0,0%,12%)] p-6 rounded-lg shadow-lg flex flex-col gap-4"
           >
-            <div
-              className={`text-6xl p-2 w-fit rounded-2xl bg-gradient-to-r ${feature.gradient} text-white mb-6`}
-            >
-              {feature.icon}
+            <div className="flex items-center md:items-start flex-row gap-4 md:flex-col">
+              <div
+                className={`p-2 w-fit rounded-2xl bg-gradient-to-r ${feature.gradient} text-white`}
+              >
+                {feature.icon}
+              </div>
+              <h3 className="text-sm md:text-2xl font-semibold">
+                {feature.title}
+              </h3>
             </div>
-            <h3 className="text-2xl font-semibold mb-4">{feature.title}</h3>
-            <p className="text-gray-400">{feature.description}</p>
+            <p className="text-gray-400 text-xs md:text-base">
+              {feature.description}
+            </p>
           </motion.div>
         ))}
       </div>

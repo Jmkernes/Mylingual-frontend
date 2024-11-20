@@ -31,19 +31,20 @@ export default function () {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl lg:text-6xl font-bold text-white"
+            className="text-xl md:text-4xl lg:text-6xl font-bold text-white"
           >
-            A new Learn what{"'"}s most important to you, you
+            Learn what{"'"}s most important to you, you
           </motion.h2>
           <motion.p
-            className="text-lg lg:text-xl text-gray-300"
+            className="text-base md:text-lg lg:text-xl text-gray-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 0.8 }}
           >
-            The person who knows the most about you is yourself. We use AI to
-            learn from you
+            You know yourself better than any textbook does. Our AI learns from
+            you, teaching you how to translate not just your words, but
+            yourself.
           </motion.p>
         </div>
 
@@ -53,7 +54,7 @@ export default function () {
           <motion.img
             src="/landing-frame1.jpeg"
             alt="Wireframe 1"
-            className="w-40 lg:w-64 aspect-[500/1041] transform translate-x-[-10%] rounded-2xl shadow-sm shadow-black overflow-clip"
+            className="w-40 z-10 lg:w-64 aspect-[500/1041] transform translate-x-[-10%] rounded-2xl shadow-sm shadow-black overflow-clip"
             style={{
               y: leftFrameY,
             }}

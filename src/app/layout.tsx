@@ -19,10 +19,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html
-      lang="en"
-      className="bg-light-100 dark:bg-dark-400 text-tiktok-black dark:text-tiktok-white"
-    >
+    <html lang="en" className="bg-[hsl(0,0%,3%)] text-tiktok-white">
       <head>
         <link
           rel="apple-touch-icon"
