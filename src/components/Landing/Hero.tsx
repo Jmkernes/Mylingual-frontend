@@ -64,6 +64,7 @@ export default function () {
         autoPlay
         muted
         loop
+        playsInline
         className="fixed inset-0 h-full w-full object-cover opacity-80 -z-10 pointer-events-none"
         style={{ opacity: videoOpacity }}
         src="/mylingual-landing.mp4"
