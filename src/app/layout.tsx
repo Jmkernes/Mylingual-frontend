@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import { Open_Sans } from "next/font/google";
 import { ReactNode } from "react";
 import "./globals.css";
+import { PHProvider } from "./providers";
 
 const PostHogPageView = dynamic(() => import("./PostHogPageView"), {
   ssr: false,
@@ -15,6 +16,13 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "MyLingual AI",
   description: "The hardest languages to learn just got easier",
+  applicationName: "MyLingual AI",
+  keywords: [
+    "language learning",
+    "hardest languages",
+    "easiest languages",
+    "language app",
+  ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -40,7 +48,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={openSans.className}>{children}</body>
+      <PHProvider>
+        <body className={openSans.className}>
+          <PostHogPageView />
+          {children}
+        </body>
+      </PHProvider>
     </html>
   );
 }

@@ -23,24 +23,27 @@ export default function () {
       />
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col md:flex-row justify-center items-center gap-12 px-4 lg:px-12 w-full max-w-7xl">
+      <div className="relative z-20 flex flex-col lg:flex-row justify-center items-center gap-12 px-4 lg:px-12 w-full max-w-7xl">
         {/* Text Section */}
         <div className="flex flex-col gap-4 text-center lg:text-left lg:w-1/2">
           <motion.h2
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.5 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="text-xl md:text-4xl lg:text-6xl font-bold text-white"
           >
-            Learn what{"'"}s most important to you, you
+            Learn what{"'"}s most important to{" "}
+            <span className="bg-gradient-to-b from-blue-400 to-sky-600 bg-clip-text text-transparent">
+              you
+            </span>
           </motion.h2>
           <motion.p
             className="text-base md:text-lg lg:text-xl text-gray-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.5 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
           >
             You know yourself better than any textbook does. Our AI learns from
             you, teaching you how to translate not just your words, but

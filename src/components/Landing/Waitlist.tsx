@@ -17,7 +17,7 @@ const HeroText = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 3000); // Change every 3 seconds
+    }, 2000); // Change every 3 seconds
     return () => clearInterval(interval);
   }, [texts.length]);
 
@@ -31,7 +31,7 @@ const HeroText = () => {
           opacity: 1,
           x: 0,
         }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
         className="text-2xl tracking-wider font-bold bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent"
       >
         {texts[currentIndex]}
@@ -43,7 +43,7 @@ const HeroText = () => {
 export default function () {
   return (
     <div className="relative flex items-center justify-center bg-gradient-to-br from-[hsl(0,0%,6%)] via-[hsl(308,20%,10%)] to-transparent h-screen w-full">
-      <div className="rounded-2xl bg-[hsl(0,0%,8%)] p-8 w-fit max-w-[80%] h-fit shadow-black shadow-lg">
+      <div className="rounded-2xl bg-[hsl(0,0%,12%)] p-8 w-fit max-w-[80%] h-fit shadow-black shadow-lg">
         <motion.div
           animate={{
             scale: [0, 1, 0],
@@ -115,7 +115,7 @@ export default function () {
             initial={{ opacity: 0, y: -50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false, amount: 0.5 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="text-4xl lg:text-6xl font-bold text-white"
           >
             Let{"'"}s change how we learn

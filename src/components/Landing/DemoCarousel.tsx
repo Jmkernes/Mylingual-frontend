@@ -55,8 +55,8 @@ export default function () {
           className="text-4xl md:text-6xl font-bold"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
         >
           The First Truly{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">
@@ -65,11 +65,11 @@ export default function () {
           Language Experience
         </motion.h1>
         <motion.p
-          className="text-lg md:text-xl text-gray-300 mt-4 max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-gray-300 mt-4 max-w-[90%] mx-auto"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.5 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           Experience a dynamic, personalized language learning journey that
           adapts to your unique needs and goals.
@@ -84,7 +84,7 @@ export default function () {
             className="flex flex-col gap-4"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: columnIndex * 0.07 }}
           >
             {imageUrls

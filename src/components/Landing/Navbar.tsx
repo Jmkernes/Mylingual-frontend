@@ -74,7 +74,7 @@ export default function () {
           MyLingual AI
         </Link>
 
-        <div className="absolute left-1/2 -translate-x-1/2 top-3 max-h-8 max-w-8">
+        <div className="left-1/2 -translate-x-1/2 top-3 max-h-8 max-w-8 hidden md:block absolute">
           <Image
             alt="logo"
             src={"/android-chrome-192x192.png"}

@@ -36,11 +36,11 @@ export default function () {
       {/* Header */}
       <header className="text-center">
         <motion.h2
-          className="text-xl md:text-3xl font-bold"
+          className="text-xl md:text-4xl font-bold"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           Why Choose{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
@@ -48,18 +48,18 @@ export default function () {
           </span>
         </motion.h2>
         <motion.p
-          className="text-sm md:text-md text-gray-300 mt-4 max-w-3xl mx-auto"
+          className="text-sm md:text-xl text-gray-300 mt-4 max-w-3xl mx-auto"
           initial={{ opacity: 0, scale: 0.5 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: false, amount: 0.5 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.5 }}
         >
           We{"'"}ve invented a new way to learn languages, using AI to go beyond
           immersion
         </motion.p>
       </header>
 
-      <div className="flex items-center justify-center w-2/3 overflow-hidden">
+      <div className="items-center justify-center w-2/3 overflow-hidden hidden md:flex">
         <motion.div
           animate={{ x: ["-100%", "100%", "-100%"] }}
           transition={{
@@ -86,13 +86,13 @@ export default function () {
       </div>
 
       {/* Features Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[90%] px-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-8 md:max-w-[90%] px-4">
         {features.map((feature, index) => (
           <motion.div
             initial={{ opacity: 0, y: 0 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ amount: 0.2 }}
-            transition={{ duration: 1, delay: index * 0.2 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
             key={index}
             className="bg-[hsl(0,0%,12%)] p-6 rounded-lg shadow-lg flex flex-col gap-4"
           >
@@ -102,11 +102,11 @@ export default function () {
               >
                 {feature.icon}
               </div>
-              <h3 className="text-sm md:text-2xl font-semibold">
+              <h3 className="text-base md:text-2xl font-semibold">
                 {feature.title}
               </h3>
             </div>
-            <p className="text-gray-400 text-xs md:text-base">
+            <p className="text-gray-400 text-sm md:text-base">
               {feature.description}
             </p>
           </motion.div>

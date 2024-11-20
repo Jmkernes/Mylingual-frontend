@@ -7,10 +7,8 @@ import Navbar from "./Navbar";
 import Waitlist from "./Waitlist";
 
 const LandingPage = () => {
-  12;
-
   return (
-    <body className="p-0 m-0 flex flex-col h-fit">
+    <main className="p-0 m-0 flex flex-col h-fit">
       <Navbar />
       <Hero />
       <CallToAction />
@@ -18,7 +16,7 @@ const LandingPage = () => {
       <DemoCarousel />
       <Waitlist />
       <Footer />
-    </body>
+    </main>
   );
 };
 

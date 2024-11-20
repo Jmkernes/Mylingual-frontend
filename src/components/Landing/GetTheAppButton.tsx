@@ -22,7 +22,7 @@ export default function () {
         backgroundColor: "#10B981",
         color: "white",
         scale: "1.1",
-        transition: { duration: 0.3 },
+        transition: { duration: 0.5 },
       }}
       onClick={() => window.open(SIGNUP_FORM_URL, "_blank")}
       className="relative backdrop-blur-md rounded-full h-12 bg-gradient-to-br from-red-500/80 via-rose-500/80 to-orange-600/80 hover:scale-110 duration-300 transition-all hover:bg-gradient-to-br hover:from-emerald-500 hover:to-green-500 group"
