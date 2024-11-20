@@ -39,7 +39,7 @@ export default function () {
       setLastScrollY(window.scrollY);
     };
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       if (e.clientY < 50) {
         setIsHoveringTop(true); // Hover detected near top
       } else {
