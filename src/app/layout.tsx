@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { Open_Sans } from "next/font/google";
@@ -51,6 +52,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <PHProvider>
         <body className={openSans.className}>
           <PostHogPageView />
+          <Analytics />
           {children}
         </body>
       </PHProvider>
