@@ -31,7 +31,7 @@ export default function () {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 0.5 }}
-            className="text-xl md:text-4xl lg:text-6xl font-bold text-white"
+            className="text-xl md:text-4xl lg:text-6xl font-bold text-white z-20"
           >
             Learn what{"'"}s most important to{" "}
             <span className="bg-gradient-to-b from-blue-400 to-sky-600 bg-clip-text text-transparent">
@@ -45,9 +45,8 @@ export default function () {
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 0.5 }}
           >
-            You know yourself better than any textbook does. Our AI learns from
-            you, teaching you how to translate not just your words, but
-            yourself.
+            You know yourself better than anyone. Our AI learns from you,
+            teaching you how to translate not just your words, but yourself.
           </motion.p>
         </div>
 
@@ -55,7 +54,7 @@ export default function () {
         <div className="relative flex justify-center lg:justify-end items-center gap-4 lg:gap-6">
           {/* Left Frame */}
           <motion.img
-            src="/landing-frame1.jpeg"
+            src="/landing-frame4.jpeg"
             alt="Wireframe 1"
             className="w-40 z-10 lg:w-64 aspect-[500/1041] transform translate-x-[-10%] rounded-2xl shadow-sm shadow-black overflow-clip"
             style={{
@@ -65,7 +64,7 @@ export default function () {
 
           {/* Right Frame */}
           <motion.img
-            src="/landing-frame2.jpeg"
+            src="/landing-frame5.jpeg"
             alt="Wireframe 2"
             className="w-44 lg:w-72 aspect-[657/1369] transform translate-x-[10%] rounded-2xl shadow-sm shadow-black overflow-clip"
             style={{ y: rightFrameY, rotateZ: "8deg" }}

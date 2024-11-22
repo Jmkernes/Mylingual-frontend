@@ -15,15 +15,102 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MyLingual AI",
-  description: "The hardest languages to learn just got easier",
+  metadataBase: new URL("https://mylingual.ai"),
+  title: { default: "MyLingual AI", template: "%s | MyLingual AI" },
+  description:
+    "Turn the hardest languages into the easiest languages to learn.",
   applicationName: "MyLingual AI",
+  authors: [{ name: "MyLingual AI Team", url: "https://mylingual.ai" }],
+  generator: "Next.js",
   keywords: [
+    "hardest languages to learn",
+    "easiest languages to learn",
     "language learning",
-    "hardest languages",
-    "easiest languages",
-    "language app",
+    "AI language learning",
+    "learn languages fast",
+    "language mastery with AI",
+    "MyLingual AI",
+    "language education",
+    "multilingual learning",
+    "language skills improvement",
   ],
+  referrer: "origin",
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#000000" },
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+  ],
+  colorScheme: "light dark",
+  viewport: "width=device-width, initial-scale=1",
+  creator: "MyLingual AI Team",
+  publisher: "MyLingual AI",
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://mylingual.ai",
+    // hreflang: {
+    //   "en-US": "https://mylingual.ai/en-US",
+    // },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32" },
+      { url: "/favicon-16x16.png", sizes: "16x16" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
+  openGraph: {
+    type: "website",
+    url: "https://mylingual.ai",
+    title: "MyLingual AI",
+    description:
+      "Turn the hardest languages into the easiest languages to learn.",
+    siteName: "MyLingual AI",
+    images: [
+      {
+        url: "/og-graph.png", // Replace with actual OpenGraph image URL
+        alt: "MyLingual AI Logo",
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@mylingualai",
+    creator: "@mylingualai",
+    title: "MyLingual AI",
+    description:
+      "Turn the hardest languages into the easiest languages to learn.",
+    images: ["/twitter-image.png"], // Replace with actual Twitter image URL
+  },
+  // facebook: {
+  //   appId: "1234567890", // Replace with your actual Facebook App ID
+  // },
+  verification: {
+    google: "t2tQQUButb_foDj6PLbMMZ3UYK8P5hFFWFM_ULaMXl0", // Replace with your Google verification code
+    yandex: "b5fcbd9a3772bf05", // Replace with Yandex verification code if applicable
+  },
+  appleWebApp: {
+    capable: true,
+    title: "MyLingual AI",
+    statusBarStyle: "black-translucent",
+  },
+  formatDetection: { telephone: false },
+  // itunes: {
+  //   app: {
+  //     id: "1234567890", // Replace with your app's ID if applicable
+  //     affiliateData: "affiliate123", // Optional
+  //     appArguments: "ref=mylingualai", // Optional
+  //   },
+  // },
+  // archives: ["https://mylingual.ai/archives"],
+  // assets: "https://mylingual.ai/assets",
+  // bookmarks: "https://mylingual.ai/bookmarks",
+  category: "AI-Powered Language Learning",
+  classification: "Language Learning and Education",
+  other: {
+    "x-custom-meta": "MyLingualAI",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

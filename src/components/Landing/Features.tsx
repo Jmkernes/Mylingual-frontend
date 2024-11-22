@@ -1,31 +1,31 @@
 "use client";
 import {
   BoltIcon,
-  CpuChipIcon,
-  FaceSmileIcon,
+  CircleStackIcon,
+  UserIcon,
 } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 
 const features = [
   {
-    title: "Speed",
+    title: "Real-time Language Library",
     description:
-      "Most language courses take years to get to fluency. Our AI designs the most efficient path to your target proficiency, reducing acquisition time by up to 10x",
-    icon: <BoltIcon className="h-4 w-4 md:h-6 md:w-6 stroke-2" />,
+      "Create learning modules from your daily recorded conversations. New lessons every day.",
+    icon: <CircleStackIcon className="h-4 w-4 md:h-6 md:w-6 stroke-2" />,
     gradient: "from-yellow-400 via-orange-500 to-red-500",
   },
   {
-    title: "Skill",
+    title: "Multilingual Edition of You",
     description:
-      "For most of us, we learn a language for one reason: communication. Our curriculum enables you to discuss the topics important to you, whether that's physics, work, or the last season of Love is Blind",
-    icon: <CpuChipIcon className="h-4 w-4 md:h-6 md:w-6 stroke-2" />,
+      "Want to learn Chinese? We replicate your thoughts and speaking patterns in Chinese. Learning becomes familiar and comfortable, because after all, it's from you.",
+    icon: <UserIcon className="h-4 w-4 md:h-6 md:w-6 stroke-2" />,
     gradient: "from-green-400 via-teal-500 to-blue-500",
   },
   {
-    title: "Fun",
+    title: "10X Speed",
     description:
-      "Language learning should be fun, and we mean it. The faster you can begin thinking in a new language, the more you'll build good habits. We use gamification and a supportive community of learners to help you succeed",
-    icon: <FaceSmileIcon className="h-4 w-4 md:h-6 md:w-6 stroke-2" />,
+      "From the moment you start, we use data and adaptive AI algorithms to teach you the most important things to get you to the next stage. We use AI tutoring to check-in, and tweak your curriculum as you go.",
+    icon: <BoltIcon className="h-4 w-4 md:h-6 md:w-6 stroke-2" />,
     gradient: "from-pink-400 via-purple-500 to-indigo-500",
   },
 ];
@@ -54,8 +54,9 @@ export default function () {
           viewport={{ once: false, amount: 0.5 }}
           transition={{ duration: 0.5 }}
         >
-          We{"'"}ve invented a new way to learn languages, using AI to go beyond
-          immersion
+          Our app revolutionizes language learning, increasing learning speed
+          10x by continuously creating real-life data for you to learn from,
+          based on a multilingual version of yourself.
         </motion.p>
       </header>
 

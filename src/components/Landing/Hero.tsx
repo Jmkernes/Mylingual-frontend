@@ -94,7 +94,7 @@ export default function () {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3 }}
         >
-          Learn Faster, Smarter
+          Learn Languages Faster, Smarter
         </motion.h1>
         <motion.p
           className="text-lg md:text-2xl mb-12"
@@ -102,8 +102,8 @@ export default function () {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.3, delay: 0.1 }}
         >
-          From zero to fluent in months, we{"'"}ve used AI to re-invent Language
-          Learning
+          From zero to real communication in weeks. <br /> Express your native
+          thoughts and literally learn from yourself
         </motion.p>
         <GetTheAppButton />
       </motion.div>
